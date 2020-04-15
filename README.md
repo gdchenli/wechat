@@ -1,5 +1,19 @@
 ### 示例
 ```go
+package main
+
+import (
+	"encoding/json"
+	"fmt"
+	"net/http"
+
+	"github.com/gdchenli/wechat.v2/corp/externalcontact"
+
+	"github.com/gdchenli/wechat.v2/corp/addresslist"
+	"github.com/gdchenli/wechat.v2/corp/core"
+)
+
+
 var customerSecret = "客户联系secret"
 var corpSecret = "应用secrest"
 var corpid = "corpid"
