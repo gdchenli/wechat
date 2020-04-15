@@ -3,8 +3,7 @@
 var customerSecret = "客户联系secret"
 var corpSecret = "应用secrest"
 var corpid = "corpid"
-var AccessTokenServer = core.NewDefaultAccessTokenServer(corpid, customerSecret, nil) // 一個應用只能有一個實例
-var corpClient = addresslist.NewClient(AccessTokenServer, nil)
+var AccessTokenServer = core.NewDefaultAccessTokenServer(corpid, customerSecret, nil)
 
 func main() {
 	externalClient := externalcontact.NewClient(AccessTokenServer, http.DefaultClient)
