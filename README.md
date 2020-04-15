@@ -7,10 +7,9 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/gdchenli/wechat.v2/corp/externalcontact"
-
 	"github.com/gdchenli/wechat.v2/corp/addresslist"
 	"github.com/gdchenli/wechat.v2/corp/core"
+	"github.com/gdchenli/wechat.v2/corp/externalcontact"
 )
 
 
