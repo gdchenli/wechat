@@ -9,7 +9,7 @@ var corpClient = addresslist.NewClient(AccessTokenServer, nil)
 func main() {
 	externalClient := externalcontact.NewClient(AccessTokenServer, http.DefaultClient)
 	//外部联系人标签列表
-	params := externalcontact.TagListParameters{TagIds: []string{"etTFm0DAAAIj36aLEJOZyyG_g3b3FTDw"}}
+	params := externalcontact.TagListParameters{TagIds: []string{"tagid"}}
 	tagGroups, err := externalClient.TagList(params)
 	if err != nil {
 		fmt.Println(err)
@@ -27,7 +27,7 @@ func main() {
 	fmt.Printf("客户群列表 %v\n", string(groupChatsBytes))
 
 	//客户群详细
-	groupChatDetailparams := externalcontact.GroupChatDetailParameters{ChatId: "wrTFm0DAAAZ3IwU3rdCMtYi_9zyzzmjQ"}
+	groupChatDetailparams := externalcontact.GroupChatDetailParameters{ChatId: "ChatId"}
 	groupChatDetail, err := externalClient.GroupChatDetail(groupChatDetailparams)
 	if err != nil {
 		fmt.Println(err)
@@ -43,7 +43,7 @@ func main() {
 	fmt.Printf("获取客户列表%v\n", externalUserids)
 
 	//获取客户详情
-	userInfo, err := externalClient.UserDetail("wmTFm0DAAANAJzyVo3iF-rN8DmAokDJw")
+	userInfo, err := externalClient.UserDetail("ChatId")
 	if err != nil {
 		fmt.Println(err)
 	}
